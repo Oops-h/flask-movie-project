@@ -17,14 +17,12 @@
             display: inline;
         }
 
-    </style>
-    <style>
         .media{
             padding:3px;
             border:1px solid #ccc
         }
-
     </style>
+{% block css %} {% endblock %}
 </head>
 
 <body>
@@ -101,7 +99,7 @@
 <script src="{{ url_for('static', filename='base/js/jquery.singlePageNav.min.js')}}"></script>
 <script src="{{ url_for('static', filename='base/js/wow.min.js')}}"></script>
 <script src="{{ url_for('static', filename='lazyload/jquery.lazyload.min.js')}}"></script>
-<script src="//cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
+<script src="https://cdn.bootcss.com/holder/2.9.4/holder.min.js"></script>
 <script>
     $(function() {
         new WOW().init();
