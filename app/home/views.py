@@ -23,24 +23,32 @@ def register():
 def user():
     return render_template("home/user.html")
 
-@home.route("/pwd")
+@home.route("/pwd/")
 def pwd():
     return render_template("home/pwd.html")
 
-@home.route("/comments")
+@home.route("/comments/")
 def comments():
     return render_template("home/comments.html")
 
-@home.route("/loginlog")
+@home.route("/loginlog/")
 def loginlog():
     return render_template("home/loginlog.html")
 
-@home.route("/moviecol")
+@home.route("/moviecol/")
 def moviecol():
     return render_template("home/moviecol.html")
 
-@home.route("/test")
-def test():
-    return render_template("home/moviecol.html")
+@home.route("/animation/")
+def animation():
+    return render_template("home/animation.html")
 
-import time
+@home.route("/search/")
+def search():
+    return render_template("home/search.html")
+
+@home.route("/play/")
+def play():
+    return render_template("home/play.html")
+
+
