@@ -6,3 +6,5 @@ flask_script
 requests
 uwsgi
 pymysql
+Jinja2
+flask_wtf

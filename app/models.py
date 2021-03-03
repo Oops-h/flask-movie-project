@@ -1,14 +1,6 @@
 # coding:utf8
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-import pymysql
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:root@localhost:3306/movie_project?charset=utf8'
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
-db = SQLAlchemy(app)
-
+from app import db
 
 # 会员表
 class User(db.Model):
@@ -157,6 +149,11 @@ class Admin(db.Model):
 
     def __repr__(self):
         return "<Admin %r>" % self.id
+
+    def check_pwd(self, pwd):
+        from werkzeug.security import check_password_hash
+        return check_password_hash(self.pwd, pwd)
+
 
 #  管理员日志
 class Adminlog(db.Model):
