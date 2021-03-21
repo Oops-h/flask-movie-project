@@ -1,3 +1,5 @@
+{#<link rel="stylesheet" href="{{ url_for('static', filename='fonts/css/font-awesome.min.css') }}">#}
+
 <ul class="sidebar-menu">
     <li class="header">管理菜单</li>
     <li class="treeview" id="g-1">
@@ -27,7 +29,7 @@
                 </a>
             </li>
             <li id="g-2-2">
-                <a href="{{ url_for('admin.tag_list') }}">
+                <a href="{{ url_for('admin.tag_list', page=1) }}">
                     <i class="fa fa-circle-o"></i> 标签列表
                 </a>
             </li>
