@@ -11,6 +11,12 @@ manager.py 无法正常运行
 url:http://www.pythondoc.com/flask-sqlalchemy/api.html?highlight=next#flask.ext.sqlalchemy.Pagination.next
 模型：Tag
 表单：TagFrom
-请求方法：GET、POST
+请求方法：get、post
 访问控制：@admin_login_req
 
+电影管理
+1、使用werkzeug.utils.secure_filename存储路径
+模型：Movie
+表单：MovieForm
+请求方法：get post
+访问控制：@ admin_login_req
